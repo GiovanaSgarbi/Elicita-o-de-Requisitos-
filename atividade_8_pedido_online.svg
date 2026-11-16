@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="650" viewBox="0 0 1600 650">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#263238"/></marker><marker id="msg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#607d8b"/></marker></defs>
+<style>
+.pool{fill:#fff;stroke:#263238;stroke-width:2}.lane{fill:#f7fafc;stroke:#90a4ae;stroke-width:1.5}
+.task{fill:#e3f2fd;stroke:#1565c0;stroke-width:2}.event{fill:#fff;stroke:#2e7d32;stroke-width:3}
+.end{fill:#fff;stroke:#c62828;stroke-width:4}.gateway{fill:#fff8e1;stroke:#ef6c00;stroke-width:2}
+.flow{fill:none;stroke:#263238;stroke-width:2;marker-end:url(#arrow)}.message{fill:none;stroke:#607d8b;stroke-width:2;stroke-dasharray:8 6;marker-end:url(#msg)}
+.txt{font:16px Arial,sans-serif;fill:#263238;text-anchor:middle}.small{font:14px Arial,sans-serif;fill:#263238}.pooltitle{font:bold 15px Arial;fill:#263238;text-anchor:middle}
+</style>
+<rect class="pool" x="80" y="40" width="1480" height="90"/><text class="pooltitle" x="130" y="90">CLIENTE</text>
+<rect class="pool" x="80" y="180" width="1480" height="390"/>
+<rect class="lane" x="110" y="180" width="1450" height="195"/><rect class="lane" x="110" y="375" width="1450" height="195"/>
+<text class="pooltitle" x="105" y="280" transform="rotate(-90 105 280)">ATENDIMENTO</text><text class="pooltitle" x="105" y="480" transform="rotate(-90 105 480)">ESTOQUE E EXPEDIÇÃO</text>
+<circle class="event" cx="178" cy="275" r="18"/><text class="small" x="178" y="318" text-anchor="middle">Pedido recebido</text>
+<rect class="task" x="235" y="240" width="120" height="70" rx="12"/><text class="txt" x="295" y="270"><tspan x="295">Registrar</tspan><tspan x="295" dy="20">pedido</tspan></text>
+<rect class="task" x="400" y="240" width="130" height="70" rx="12"/><text class="txt" x="465" y="270"><tspan x="465">Verificar</tspan><tspan x="465" dy="20">pagamento</tspan></text>
+<polygon class="gateway" points="615,250 640,275 615,300 590,275"/><text class="txt" x="615" y="282" font-weight="bold">X</text><text class="small" x="615" y="238" text-anchor="middle">Pagamento aprovado?</text>
+<rect class="task" x="690" y="180" width="145" height="70" rx="12"/><text class="txt" x="762" y="208"><tspan x="762">Avisar cliente</tspan><tspan x="762" dy="20">sobre recusa</tspan></text>
+<circle class="end" cx="918" cy="215" r="18"/><text class="small" x="918" y="250" text-anchor="middle">Pedido cancelado</text>
+<polygon class="gateway" points="715,447 740,472 715,497 690,472"/><path d="M703 460 L727 484 M727 460 L703 484" stroke="#ef6c00" stroke-width="3"/>
+<text class="small" x="715" y="535" text-anchor="middle">Dividir atividades</text>
+<rect class="task" x="800" y="395" width="130" height="70" rx="12"/><text class="txt" x="865" y="425"><tspan x="865">Separar</tspan><tspan x="865" dy="20">produtos</tspan></text>
+<rect class="task" x="800" y="485" width="130" height="70" rx="12"/><text class="txt" x="865" y="515"><tspan x="865">Emitir nota</tspan><tspan x="865" dy="20">fiscal</tspan></text>
+<polygon class="gateway" points="1035,447 1060,472 1035,497 1010,472"/><path d="M1023 460 L1047 484 M1047 460 L1023 484" stroke="#ef6c00" stroke-width="3"/>
+<text class="small" x="1035" y="535" text-anchor="middle">Reunir atividades</text>
+<rect class="task" x="1120" y="437" width="180" height="70" rx="12"/><text class="txt" x="1210" y="465"><tspan x="1210">Despachar pedido</tspan><tspan x="1210" dy="20">e confirmar</tspan></text>
+<circle class="end" cx="1408" cy="472" r="18"/><text class="small" x="1408" y="510" text-anchor="middle">Pedido concluído</text>
+<path class="flow" d="M196 275 H235 M355 275 H400 M530 275 H590 M615 250 V215 H690 M835 215 H900 M615 300 V472 H690 M740 472 H770 V430 H800 M740 472 H770 V520 H800 M930 430 H980 V472 H1010 M930 520 H980 V472 H1010 M1060 472 H1120 M1300 472 H1390"/>
+<text class="small" x="660" y="205">Não</text><text class="small" x="650" y="390">Sim</text>
+<path class="message" d="M160 130 L178 257"/><text class="small" x="190" y="155">Enviar pedido</text>
+<path class="message" d="M1210 437 V130"/><text class="small" x="1225" y="160">Enviar confirmação</text>
+<text x="800" y="620" font-family="Arial" font-size="13" fill="#607d8b" text-anchor="middle">Processo BPMN — Compra em loja virtual</text>
+</svg>
